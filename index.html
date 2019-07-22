@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="play.html">
+    关卡
+    <span id="level">1</span>
+</a>
+<script>
+    console.log(window.location.href);
+    var level=window.location.href.split('#')[1]-0;
+    console.log(level);
+    if(level){
+        if(level===4)level=0;
+        document.getElementById('level').innerText=level+1;
+        document.getElementsByTagName('a')[0].setAttribute('href','play.html#'+level);
+    }
+</script>
+</body>
+</html>
